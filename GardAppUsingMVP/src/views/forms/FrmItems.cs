@@ -34,7 +34,7 @@ namespace GardAppUsingMVP.src.views.forms
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if(itemPresenter.addItem())
+            if(itemPresenter.addItem() == 1)
             {
                MessageBox.Show("Done");
             } else

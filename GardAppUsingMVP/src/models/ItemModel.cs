@@ -11,5 +11,6 @@ namespace GardAppUsingMVP.src.models
        public int ID { get; set; }
        public String ItemName { get; set; }
        public decimal ItemQTY { get; set; }
+
     }
 }

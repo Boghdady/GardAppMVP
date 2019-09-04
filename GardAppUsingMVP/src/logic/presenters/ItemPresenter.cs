@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using GardAppUsingMVP.src.models;
 using GardAppUsingMVP.src.views.interfaces;
 using GardAppUsingMVP.src.logic.services;
+using System.Data.SqlClient;
 
 namespace GardAppUsingMVP.src.logic.presenters
 {
@@ -26,15 +27,10 @@ namespace GardAppUsingMVP.src.logic.presenters
             itemModel.ItemQTY = itemInterface.ItemQty;
         }
 
-        public bool addItem()
+        public int addItem()
         {
             ConnectBetweenModelAndView();
-            if (ItemService.addItem(itemModel.ID, itemModel.ItemName, itemModel.ItemQTY) == 1)
-            {
-                return true;
-            }
-
-            return false;
+            return ItemService.addItemService(itemModel.ID, itemModel.ItemName, itemModel.ItemQTY);
         }
 
 
