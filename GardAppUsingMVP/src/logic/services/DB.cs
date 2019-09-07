@@ -13,7 +13,7 @@ namespace GardAppUsingMVP.src.logic.services
         static private SqlConnection sqlConnection;
         static public SqlCommand command;
 
-       static public int dbConnect(string spName,Action method)
+       static public bool dbConnect(string spName,Action method )
         {
             try
             {
@@ -25,13 +25,15 @@ namespace GardAppUsingMVP.src.logic.services
             
                 method.Invoke();
                 sqlConnection.Open();
-                return command.ExecuteNonQuery();
+                command.ExecuteNonQuery();
+
+                return true;
 
             }
             catch (SqlException ex)
             {
                 Console.WriteLine("SQL Error" + ex.Message.ToString());
-                return 0;
+                return false;
             }
             finally
             {

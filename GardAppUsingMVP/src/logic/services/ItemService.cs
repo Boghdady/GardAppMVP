@@ -21,11 +21,19 @@ namespace GardAppUsingMVP.src.logic.services
         }
 
     
-        static public int addItemService(int id, String itemName, decimal itemQTY)
+        static public bool addItemService(int id, String itemName, decimal itemQTY)
         {   
             return DB.dbConnect("sp_AddItem", () => PrepareAddSP(id, itemName, itemQTY, DB.command));
         }
 
+        static public bool deleteAllItemsService() {
+            return DB.dbConnect("sp_DeleteAllItems", () => { });
+        }
+
+        static public bool getAllItems()
+        {
+            return DB.dbConnect("", () => { });
+        }
 
     }
 }

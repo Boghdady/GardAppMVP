@@ -34,10 +34,22 @@ namespace GardAppUsingMVP.src.views.forms
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if(itemPresenter.addItem() == 1)
+            if(itemPresenter.addItem())
             {
                MessageBox.Show("Done");
             } else
+            {
+                MessageBox.Show("Error");
+            }
+        }
+
+        private void btnDeleteAll_Click(object sender, EventArgs e)
+        {
+            if (itemPresenter.deleteAllItems())
+            {
+                MessageBox.Show("Done");
+            }
+            else
             {
                 MessageBox.Show("Error");
             }

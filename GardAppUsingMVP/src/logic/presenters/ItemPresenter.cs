@@ -27,11 +27,17 @@ namespace GardAppUsingMVP.src.logic.presenters
             itemModel.ItemQTY = itemInterface.ItemQty;
         }
 
-        public int addItem()
+        public bool addItem()
         {
             ConnectBetweenModelAndView();
             return ItemService.addItemService(itemModel.ID, itemModel.ItemName, itemModel.ItemQTY);
         }
+
+        public bool deleteAllItems()
+        {
+            return ItemService.deleteAllItemsService();
+        }
+
 
 
     }
