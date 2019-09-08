@@ -23,17 +23,23 @@ namespace GardAppUsingMVP.src.logic.services
     
         static public bool addItemService(int id, String itemName, decimal itemQTY)
         {   
-            return DB.dbConnect("sp_AddItem", () => PrepareAddSP(id, itemName, itemQTY, DB.command));
+            return SQLHelpers.ExecuteNonQuerySP("sp_AddItem", () => PrepareAddSP(id, itemName, itemQTY, SQLHelpers.command));
         }
 
         static public bool deleteAllItemsService() {
-            return DB.dbConnect("sp_DeleteAllItems", () => { });
+            return SQLHelpers.ExecuteNonQuerySP("sp_DeleteAllItems", () => { });
         }
 
-        static public bool getAllItems()
+        static public DataTable getAllItemsService()
         {
-            return DB.dbConnect("", () => { });
+            return SQLHelpers.ExcuteSelectSp("SP_GetAllItems", () => { });
         }
 
+        static public DataTable getAllItemsTypesServices()
+        {
+            return SQLHelpers.ExcuteSelectSp("SP_GetAllItemsTypes", () => { });
+        }
+
+  
     }
 }

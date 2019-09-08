@@ -424,13 +424,10 @@
   <data name="groupBox3.Text" xml:space="preserve">
     <value>العمليات المتاحة</value>
   </data>
-  <data name="dgvSearch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 352</value>
-  </data>
-  <data name="dgvSearch.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="dgvItems.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
   </data>
-  <data name="dgvSearch.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="dgvItems.Size" type="System.Drawing.Size, System.Drawing">
     <value>996, 325</value>
   </data>
   <data name="txtID.Font" type="System.Drawing.Font, System.Drawing">
@@ -508,6 +505,36 @@
   </data>
   <data name="txtItemName.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Center</value>
+  </data>
+  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>339, 36</value>
+  </data>
+  <data name="label3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 25</value>
+  </data>
+  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>النوع :</value>
+  </data>
+  <data name="cbxTypes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>131, 33</value>
+  </data>
+  <data name="cbxTypes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>201, 33</value>
+  </data>
+  <data name="cbxTypes.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
   </data>
   <data name="label4.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>

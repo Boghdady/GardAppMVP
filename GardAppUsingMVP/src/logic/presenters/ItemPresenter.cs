@@ -7,6 +7,7 @@ using GardAppUsingMVP.src.models;
 using GardAppUsingMVP.src.views.interfaces;
 using GardAppUsingMVP.src.logic.services;
 using System.Data.SqlClient;
+using System.Data;
 
 namespace GardAppUsingMVP.src.logic.presenters
 {
@@ -37,6 +38,30 @@ namespace GardAppUsingMVP.src.logic.presenters
         {
             return ItemService.deleteAllItemsService();
         }
+
+        public void getAllItemsPresenter() 
+        {       
+            itemInterface.DgvDataSource = ItemService.getAllItemsService();
+            itemInterface.ID = ItemService.getAllItemsService().Rows.Count + 1;
+
+            ClearField();
+        }
+
+        public void FillComboBox()
+        {
+            itemInterface.CbxDataSource = ItemService.getAllItemsTypesServices();
+            itemInterface.DisplayMember = "name";
+            itemInterface.ValueMember = "id";
+
+        }
+
+        public void ClearField()
+        {
+            itemInterface.ItemName = "";
+            itemInterface.ItemQty =0;
+        }
+
+        
 
 
 
